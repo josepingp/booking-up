@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Business extends Model
 {
-    protected $fillable = [
+	protected $fillable = [
         'name',
         'phone',
         'address',
