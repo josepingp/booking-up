@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\Booking\CancelSlotBookingController;
 use App\Http\Controllers\Booking\CreateSlotBookingController;
-use App\Http\Controllers\Booking\ListAvalibleBusinessController;
+use App\Http\Controllers\Booking\ListAvailableBusinessController;
 use App\Http\Controllers\Booking\ShowBusinessSlotsController;
 use App\Http\Controllers\Booking\UserBookingsController;
 use App\Http\Controllers\ProfileController;
@@ -23,7 +23,7 @@ Route::middleware('auth')->group(function () {
 });
 
 route::group(['middleware' => ['auth', 'verified']], function () {
-    route::get('/business', ListAvalibleBusinessController::class)->name('business.list');
+    route::get('/business', ListAvailableBusinessController::class)->name('business.list');
     route::get('/slots/{business}/{year}/{month}/{day}', ShowBusinessSlotsController::class)->name('slots.show');
     route::post('/slots/{business}/{slot}/book', CreateSlotBookingController::class)->name('slots.book');
     route::post('/slots/{business}/{booking}/cancel', CancelSlotBookingController::class)->name('bookings.cancel');

@@ -32,7 +32,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Business 1',
             'phone' => '123456789',
             'address' => 'Address 1',
-            'image' => fake()->imageUrl('Business 1'),
+            'image' => fake()->imageUrl(),
             'max_future_days' => 7,
             'slot_duration' => 30,
         ]);
@@ -79,7 +79,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Business 2',
             'phone' => '1234567890',
             'address' => 'Address 2',
-            'image' => fake()->imageUrl('Business 2'),
+            'image' => fake()->imageUrl(),
             'max_future_days' => 10,
             'slot_duration' => 60,
         ]);

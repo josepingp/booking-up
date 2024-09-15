@@ -31,7 +31,7 @@ class Schedule extends Model
 
     public function dayOfWeekString(): Attribute
     {
-        $day = match ($this->dayOfWeek) {
+        $day = match ($this->day_of_week) {
             1 => 'Lunes',
             2 => 'Martes',
             3 => 'Miercoles',
