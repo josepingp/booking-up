@@ -25,7 +25,7 @@ class Slot extends Model
         return $this->belongsTo(Business::class);
     }
 
-    public function Booking(): HasOne
+    public function booking(): HasOne
     {
         return $this->hasOne(Booking::class);
     }
@@ -42,7 +42,7 @@ class Slot extends Model
 
     public function isMyBooking(): bool
     {
-        return $this->Booking?->isMyBooking(auth()->user() ?? false);
+        return $this->booking?->isMyBooking(auth()->user()) ?? false;
     }
 
     public function canCancelBook(): bool

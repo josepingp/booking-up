@@ -55,6 +55,6 @@ class User extends Authenticatable
 
     public function hasCredits(): bool
     {
-        return $this->credit() > 0;
+        return $this->credit > 0;
     }
 }
