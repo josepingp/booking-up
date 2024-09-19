@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Booking;
 use App\Http\Controllers\Controller;
 use App\Models\Booking;
 use App\Models\Business;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 
 class CancelSlotBookingController extends Controller
@@ -12,7 +13,7 @@ class CancelSlotBookingController extends Controller
     /**
      * Handle the incoming request.
      */
-    public function __invoke(Request $request,Business $business,Booking $booking)
+    public function __invoke(Request $request,Business $business,Booking $booking): RedirectResponse
     {
         $booking->delete();
 
